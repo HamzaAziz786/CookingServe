@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6680679972777411898
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6340324621107502976}
+  - component: {fileID: 615230687580179139}
+  m_Layer: 0
+  m_Name: Burger_Ready [Mixer]
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6340324621107502976
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6680679972777411898}
+  m_LocalRotation: {x: 0, y: 0.9824618, z: 0, w: 0.18646412}
+  m_LocalPosition: {x: 0.49, y: 1.05, z: -0.335}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2514054420197618080}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 158.507, z: 0}
+--- !u!114 &615230687580179139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6680679972777411898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 586ceb2fe7867d34b9af923276744fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isRecipeFaulted: 0
+  recipeStatus: 
+  RecipeObjectInstance:
+  - {fileID: 5032730963743719766, guid: 31a758efe557e7c43ba7ec73feb12136, type: 3}
+  - {fileID: 2767009086983308017, guid: d95f32df19b5ae240ad0e6e1775386b5, type: 3}
+  - {fileID: 5006174723743042915, guid: 24496264514bacf4fbfdc48bd6847163, type: 3}
+  RecipeStatus: []
+  recipeContainers:
+  - {fileID: 11400000, guid: 72594dab03f71d74eb3e581cdd90a9f3, type: 2}
+  - {fileID: 11400000, guid: 604192669c0909242bebbe74482bc39c, type: 2}
+  instanceSlot: {fileID: 7168553800343897027}
+--- !u!1 &7168553800343897027
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2514054420197618080}
+  - component: {fileID: 6538540556756193720}
+  - component: {fileID: 3530833885156721180}
+  m_Layer: 0
+  m_Name: instanceSlot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2514054420197618080
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7168553800343897027}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6340324621107502976}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &6538540556756193720
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7168553800343897027}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.25, z: 0.5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3530833885156721180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7168553800343897027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d9518a65aa3ba44bb000da77ca067e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RecipeName: 
+  isFaulted: 0
+  isCorrect: 0
+  recipeManager: {fileID: 0}
+  recipeMixer: {fileID: 0}
