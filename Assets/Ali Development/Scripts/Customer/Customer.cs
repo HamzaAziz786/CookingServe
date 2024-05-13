@@ -149,11 +149,11 @@ public class Customer : MonoBehaviour
         {
             animator.SetTrigger("Angry");
             yield return new WaitForSeconds(4.8f);
-            SAvingMAnager.savinginstance.DeductMoney(50);
+            SAvingMAnager.savinginstance.DeductMoney(10);
         }
         else
         {
-            SAvingMAnager.savinginstance.AddMoney(100);
+            SAvingMAnager.savinginstance.AddMoney(20);
             yield return new WaitForSeconds(1.2f);
         }
 
