@@ -7,6 +7,8 @@ public class SAvingMAnager : MonoBehaviour
     public TMP_Text Moneytext;
     public static SAvingMAnager savinginstance;
     private float loadingtween;
+
+    public GameObject Upgrationpanel;
     private void Awake()
     {
         savinginstance = this;
@@ -15,12 +17,12 @@ public class SAvingMAnager : MonoBehaviour
             savinginstance = this;
         }
     }
-
+    
     private void Start()
     {
         ShowMoney();
     }
-
+    
     public void ShowMoney()
     {
         Moneytext.text = PlayerPrefs.GetInt("Money").ToString();
@@ -39,5 +41,19 @@ public class SAvingMAnager : MonoBehaviour
     {
         PlayerPrefs.SetInt("Money",PlayerPrefs.GetInt("Money")-moneydeduct);
         ShowMoney();
+    }
+
+    public void UpgrationPanel_active()
+    {
+        Upgrationpanel.SetActive(true);
+        Upgrationpanel.transform.DOScale(1, 1).SetEase(Ease.InBounce);
+        Upgrationpanel.transform.DOScale(0, 1).SetDelay(5f).SetEase(Ease.OutBounce) .OnComplete(()=> PanelSCale());
+        
+    }
+
+    public void PanelSCale()
+    {
+        Upgrationpanel.SetActive(false);
+        Upgrationpanel.transform.DOScale(0, 1).SetEase(Ease.InBounce);
     }
 }

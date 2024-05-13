@@ -150,6 +150,7 @@ public class Customer : MonoBehaviour
             animator.SetTrigger("Angry");
             yield return new WaitForSeconds(4.8f);
             SAvingMAnager.savinginstance.DeductMoney(10);
+            SAvingMAnager.savinginstance.UpgrationPanel_active();
         }
         else
         {
